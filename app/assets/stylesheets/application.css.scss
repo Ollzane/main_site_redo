@@ -1,0 +1,339 @@
+@import 'normalize';
+
+$blue       : #1c81c4;
+$dark-blue  : #1669a5;
+$white      : #f3f7f8;
+$underline  : #71d8f0;
+$highlight  : #3498db;
+$text-color : #345369;
+
+body {
+    height: 100%;
+    width: 100%;
+    background: $white;
+}
+* {
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+}
+.clearfix::before,
+.clearfix::after {
+    content: " ";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+#blog-main-header {
+    width: 100%;
+    height: 120px;
+    background: $blue;
+    border-bottom: 8px solid $dark-blue;
+    margin: 0;
+
+    .logo {
+        background: $white;
+        width: 260px;
+        height: 3.5em;
+        border-radius: 5px;
+        float: left;
+        margin: 2.2em 3em;
+        box-shadow: 0 0 10px 0.3px rgba(black, 0.6);
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            box-shadow: 0 0 30px 0.4px rgba(black, 0.6);
+        }
+        &:hover span {
+                color: $underline;
+        }
+
+        .logo-name {
+            color: $text-color;
+            padding: 0.7em 1.5em;
+            font-size: 22px;
+
+            span {
+                font-family: 'ubuntu', sans-serif;
+                padding-right: 0.1em;
+                transition: all 0.3s ease-in-out;
+                }
+    }
+  }
+}
+nav {
+    a {
+        float: right;
+        margin: 2.5em 2.7em;
+        font-size: 22px;
+        color: $white;
+        text-decoration: none;
+        }
+}
+#main-wrapper {
+    width: 100%;
+    height: 100%;
+    background: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .content-wrapper{
+        width: 1200px;
+        height: 1000px;
+        background: $white;
+        color: $text-color;
+
+        .about-me-container{
+            width: 40%;
+            height: 100%;
+            display: inline-block;
+            float: left;
+
+            .title-container{
+                margin-left: 30px;
+
+                h1{
+                    font-family: 'lobster';
+                    font-size: 2.4em;
+                    }
+                .underline-object{
+                    width: 80px;
+                    height: 8px;
+                    background: $underline;
+                    }
+                  }
+            .about-me-text-container{
+
+                p{
+                    font-size: 1.6em;
+                    margin-left: 30px;
+
+                a{
+                    color: $highlight;
+                    text-decoration: none;
+                    transition: all 0.3s ease-in-out;
+                    padding: 0.1em 0.2em;
+                    border-radius: 8px;
+
+                    &:hover{
+                        color: $white;
+                        background: $highlight;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+        .articles-container{
+            width: 30%;
+            height: 100%;
+            display: inline-block;
+            float: left;
+
+            .title-container{
+                margin-left: 30px;
+
+                h1 {
+                    font-family: 'lobster';
+                    font-size: 2.4em;
+                    }
+                .underline-object{
+                    width: 193px;
+                    height: 8px;
+                    background: $underline;
+                    }
+
+            }
+            h3 {
+                font-size: 2em;
+                margin-left: 30px;
+                a {
+                  font-family: 'raleway', sans-serif;;
+                  text-decoration: none;
+                  color: $text-color;
+                  transition: all 0.2s ease-in-out;
+                  &:hover {
+                          color: #4F97C9;
+                  }
+                }
+            }
+            .date {
+                  margin-top: -20px;
+                  margin-left: 30px;
+                  color: #B8C9D4;
+                  font-size: 1.1em;
+            }
+            .post-rule{
+              border: 1px solid #88A3B5;
+              width: 200px;
+              margin-left: 30px;
+            }
+        }
+        .projects-container{
+            width: 30%;
+            height: 100%;
+            display: inline-block;
+            float: left;
+
+            .title-container{
+                margin-left: 30px;
+
+                h1{
+                    font-family: 'lobster';
+                    font-size: 2.4em;
+                  }
+
+                .underline-object{
+                    width: 174px;
+                    height: 8px;
+                    background: $underline;
+                  }
+    }
+  }
+}
+#blog-main-footer{
+    background: $dark-blue;
+    width: 100%;
+    height: 150px;
+    border-top: 8px solid $blue;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .footer-container{
+        width: 1200px;
+        height: 100%;
+
+        .copyright{
+            color: $white;
+            float: left;
+            margin: 4em 0;
+    }
+  }
+}
+@media only screen and (max-width: 1200px){
+    #main-wrapper{
+
+        .content-wrapper{
+            width: 100%;
+            display: block;
+            text-align: center;
+
+            .about-me-container{
+                width: 100%;
+                height: 46em;
+                display: block;
+                float: none;
+
+                .title-container{
+                    margin-left: 0;
+
+                    .underline-object{
+                        display: none;
+              }
+            }
+          }
+        }
+
+            .articles-container{
+                width: 100%;
+                height: 46em;
+                display: block;
+                float: none;
+
+                .title-container{
+                    margin-left: 0;
+
+                    .underline-object{
+                        display: none;
+              }
+            }
+          }
+
+            .projects-container{
+                width: 100%;
+                height: 46em;
+                display: block;
+                float: none;
+
+                .title-container{
+                    margin-left: 0;
+
+                    .underline-object{
+                        display: none;
+        }
+      }
+    }
+  }
+    #blog-main-footer{
+
+        .footer-container{
+            width: 100%;
+    }
+  }
+}
+@media only screen and (max-width: 1000px){
+    #main-wrapper{
+
+        .content-wrapper{
+            width: 100%;
+            text-align: center;
+
+            .about-me-container{
+                .title-container{
+                    margin-left: 50px;
+                    h1{
+                        font-size: 2.4em;
+                      }
+                .about-me-text-container{
+                    p{
+                        font-size: 1.6em;
+                        margin-left: 50px;
+                        padding: 0;
+                      }
+                    a{
+                        color: $highlight;
+                        text-decoration: none;
+                        transition: all 0.3s ease-in-out;
+                        padding: 0.1em 0.2em;
+                        border-radius: 8px;
+
+                        &:hover{
+                            color: $white;
+                            background: $highlight;
+                          }
+                        }
+            }
+            .articles-container{
+                .title-container{
+                    margin-left: 50px;
+                    h1{
+                        font-size: 2em;
+                    }
+                }
+            }
+            .projects-container{
+                .title-container{
+                    margin-left: 50px;
+                    h1 {
+                        font-size: 2em;
+                    }
+                }
+            }
+    }
+  }
+}
+}
+}
+
+
+@import "new";
+@import "post";
+@import "edit";

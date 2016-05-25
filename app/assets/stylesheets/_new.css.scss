@@ -1,0 +1,68 @@
+.new-post-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .new-post-wrapper {
+    width: 1200px;
+    height: 100%;
+    text-align: center;
+    h1 {
+      color: $text-color;
+      font-size: 3em;
+    }
+    .label {
+      text-align: left;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $text-color;
+      font-size: 1.2em;
+    }
+    input[type=text] {
+      width: 100%;
+      height: 2.5em;
+      border-radius: 5px;
+      border: 2px #A3BAC9 solid;
+      padding: 10px;
+      font-family: 'raleway', sans-serif;
+      font-size: 1.2em;
+      color: $text-color;
+      margin-top: 5px;
+    }
+    textarea {
+      width: 100%;
+      height: 300px;
+      border-radius: 5px;
+      border: 2px #A3BAC9 solid;
+      margin-top: 5px;
+      padding: 10px;
+      font-family: 'raleway', sans-serif;
+      font-size: 1.2em;
+      color: $text-color;
+      resize: vertical;
+    }
+    input[type=submit] {
+      width: 180px;
+      height: 60px;
+      font-size: 1.4em;
+      font-family: 'raleway', sans-serif;
+      color: $white;
+      border-radius: 5px;
+      padding: 10px;
+      border: 4px solid $dark-blue;
+      background: $blue;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      box-shadow: 0 20px 20px -10px rgba(black, 0.6);
+      transform: scale(1);
+      &:hover {
+        background: lighten($blue, 10);
+        border-color: lighten($dark-blue, 10);
+        box-shadow: 0 50px 30px -25px rgba(black, 0.6);
+        transform: scale(1.1);
+      }
+    }
+  }
+}
