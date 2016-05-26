@@ -1,0 +1,44 @@
+#articles-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  #articles-wrapper {
+    // width: 1200px;
+    // height: 100%;
+    // text-align: center;
+    #page-title {
+      color: $text-color;
+      font-size: 3em;
+    }
+    .article-post {
+      .date {
+        margin-top: -20px;
+        margin-left: 30px;
+        color: #B8C9D4;
+        font-size: 1.1em;
+      }
+      h2 {
+        font-size: 2em;
+        margin-left: 30px;
+        a {
+          font-family: 'raleway', sans-serif;;
+          text-decoration: none;
+          color: $text-color;
+          transition: all 0.2s ease-in-out;
+          &:hover {
+                  color: #4F97C9;
+          }
+        }
+      }
+      .post-sep {
+        border: 1px solid #88A3B5;
+        width: 200px;
+        margin-left: 30px;
+        margin-bottom: 3em;
+      }
+    }
+  }
+}
