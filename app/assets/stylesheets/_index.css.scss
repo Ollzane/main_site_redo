@@ -11,9 +11,12 @@
     // text-align: center;
     #page-title {
       color: $text-color;
-      font-size: 3em;
+      font-size: 3.5em;
+      font-family: 'lobster';
+      margin-bottom: 1.4em;
     }
     .article-post {
+      text-align: center;
       .date {
         margin-top: -20px;
         margin-left: 30px;
@@ -35,9 +38,75 @@
       }
       .post-sep {
         border: 1px solid #88A3B5;
-        width: 200px;
-        margin-left: 30px;
-        margin-bottom: 3em;
+        width: 400px;
+        margin-left: 40px;
+        margin-bottom: 4em;
+      }
+    }
+  }
+  .pagination {
+    .previous_page {
+      color: $text-color;
+      font-weight: bold;
+      font-size: 1.2em;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+
+      padding: 0;
+      margin: 0;
+      border: none;
+      &:hover {
+        color: $underline;
+      }
+    }
+    em {
+      width: 40px;
+      height: 40px;
+      padding: 8px 18px;
+      margin: 0 5px;
+      background: $dark-blue;
+      border: 2px solid $dark-blue;
+      color: $white;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    a {
+      width: 40px;
+      height: 40px;
+      padding: 8px 18px;
+      margin: 0 5px;
+      background: $white;
+      border: 2px solid $dark-blue;
+      color: $dark-blue;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        color: $underline;
+        border-color: $underline;
+      }
+    }
+    .next_page {
+      color: $text-color;
+      font-weight: bold;
+      font-size: 1.2em;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+
+      padding: 0;
+      margin: 0;
+      border: none;
+      &:hover {
+        color: $underline;
+      }
+    }
+    .disabled {
+      color: #BFC5C9;
+      transition: none;
+      font-weight: normal;
+      &:hover {
+        color: #BFC5C9;
       }
     }
   }
