@@ -1,0 +1,38 @@
+<div id="contacts-container">
+  <div id="contacts-wrapper">
+    <h1 id="page-title">Need to contact me?</h1>
+    <%= form_for @contact do |f| %>
+      <div class="label">
+        <%= f.label :name %><br>
+      </div>
+      <%= f.text_field :name, required: true %>
+
+      <br>
+      <br>
+
+
+      <div class="label">
+        <%= f.label :email %><br>
+      </div>
+      <%= f.email_field :email, required: true %>
+
+      <br>
+      <br>
+
+      <div class="label">
+        <%= f.label :message %><br>
+      </div>
+      <%= f.text_area :message, as: :text %>
+
+      <div class="hidden">
+        <div class="label">
+          <%= f.label :nickname %><br>
+        </div>
+        <%= f.text_field :nickname, hint: 'leave this field blank' %>
+      </div>
+
+       <%= f.submit 'Send Message', class: "button" %>
+
+    <% end %>
+  </div>
+</div>
