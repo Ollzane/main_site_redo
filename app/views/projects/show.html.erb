@@ -1,0 +1,20 @@
+<div id="project-container">
+  <div class="project-wrapper">
+    <div class="project-title-container">
+      <div class="project-title">
+        <p class="date"><%= @project.created_at.strftime('%A, %B %d') %></p>
+        <%= @project.title %><br>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="project-content">
+      <%= markdown @project.description %>
+      <div class="project-link">
+        <a href="<%= @project.link %>" class="project-button" target="_blank" >Visit <%= @project.title %></a>
+      </div>
+    </div>
+    <hr class="project-sep">
+  </div>
+</div>

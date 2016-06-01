@@ -194,6 +194,30 @@ nav {
                     background: $underline;
                   }
     }
+    h3 {
+        font-size: 2em;
+        margin-left: 30px;
+        a {
+          font-family: 'raleway', sans-serif;;
+          text-decoration: none;
+          color: $text-color;
+          transition: all 0.2s ease-in-out;
+          &:hover {
+                  color: #4F97C9;
+          }
+        }
+    }
+    .date {
+          margin-top: -20px;
+          margin-left: 30px;
+          color: #B8C9D4;
+          font-size: 1.1em;
+    }
+    .project-rule{
+      border: 1px solid #88A3B5;
+      width: 200px;
+      margin-left: 30px;
+    }
   }
 }
 #blog-main-footer{
@@ -361,3 +385,4 @@ nav {
 @import "edit";
 @import "index";
 @import "pygments";
+@import "projects";

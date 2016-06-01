@@ -48,6 +48,11 @@
         <h1>My recent projects</h1>
         <div class="underline-object"></div>
       </div>
+      <% @projects.each do |project| %>
+        <h3><%= link_to project.title, project %></h3>
+        <p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
+        <hr class="project-rule">
+      <% end %>
     </div>
   </div>
 </div>
