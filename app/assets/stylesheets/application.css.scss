@@ -6,6 +6,15 @@ $white      : #f3f7f8;
 $underline  : #71d8f0;
 $highlight  : #3498db;
 $text-color : #345369;
+$really-light-blue : #3aa6ef;
+$dark-blue         : #2980b9;
+$really-dark-blue  : #2c3e50;
+$wet-asphalt       : #34495e;
+$dark-gray         : #c8cdd1;
+$medium-gray       : #e0e3e4;
+$light-gray        : #ecf0f1;
+$super-light-gray  : #edefef;
+$email-gray        : #c1c1c1;
 
 body {
     height: 100%;
@@ -64,12 +73,94 @@ body {
   }
 }
 nav {
-    a {
-        float: right;
-        margin: 2.5em 2.7em;
-        font-size: 22px;
+    .fa-bars {
         color: $white;
+        font-size: 2.5em;
+        cursor: pointer;
+        float: right;
+        padding: 1em 0.8em;
+    }
+}
+.slide-over-navigation-background {
+    position: fixed;
+    background: rgba(black, 0.5);
+    width: 100%;
+    height: 100%;
+    top: -500px;
+    z-index: 15;
+    display: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.slide-over-navigation {
+    width: 30rem;
+    height: 100%;
+    z-index: 20;
+    position: fixed;
+    left: -30rem;
+    background-color: $medium-gray;
+    box-shadow: 2px 0 10px 0.3px rgba(black, 0.3);
+    transition: all 0.2s ease-in-out;
+}
+.nav-button-wrapper {
+    font-family: 'ubuntu';
+    font-size: 30px;
+    width: 100%;
+
+    a {
+        box-sizing: border-box;
+        color: $highlight;
+        display: block;
+        width: 100%;
+        padding: 5px;
+        transition: all 0.2s ease;
+        margin: 0.6em 0;
         text-decoration: none;
+        padding: 0.2em 1em;
+        &:hover {
+            background-color: $highlight;
+            color: $medium-gray;
+          }
+        }
+}
+.slide-active {
+    left: 0;
+}
+.slide-background-active {
+    display: block;
+    top: 0;
+}
+.nav-heading-wrapper {
+    position: relative;
+    width: 30rem;
+    height: 70px;
+    background: $highlight;
+    border-bottom: 10px $dark-blue solid;
+    font-family: 'ubuntu', sans-serif;
+    font-size: 1.2em;
+    color: $super-light-gray;
+    box-shadow: 0px 3px 3px 0.1px rgba(1, 1, 1, 0.5);
+
+    .nav-heading {
+        position: absolute;
+        top: -0.5em;
+        left: 20px;
+    }
+
+    .nav-close-button {
+        position: absolute;
+        top: 0.2em;
+        right: 0.5em;
+        text-decoration: none;
+        color: $super-light-gray;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        font-size: 2em;
+        transform: scale(1);
+
+        &:hover {
+            transform: scale(1.25);
+          }
         }
 }
 #main-wrapper {
@@ -81,13 +172,13 @@ nav {
     align-items: center;
     flex-direction: column;
 
-    .content-wrapper{
+    .content-wrapper {
         width: 1200px;
         height: 1000px;
         background: $white;
         color: $text-color;
 
-        .about-me-container{
+        .about-me-container {
             width: 40%;
             height: 100%;
             display: inline-block;
