@@ -1,58 +1,37 @@
 <div id="main-wrapper">
   <div class="content-wrapper">
-    <div class="about-me-container clearfix">
-      <div class="title-container">
-        <h1>About me</h1>
-        <div class="underline-object"></div>
-      </div>
-      <div class="about-me-text-container">
-        <p>Hey, I’m Ollie! <br>
-           I’m a web developer and <br>
-           web designer.
-        </p>
-        <p>
-          I’m still a student <br>
-          but have grown a passion for <br>
-          web development and web  <br>
-          design. I use HTML5, Css3  <br>
-          JavaScript and Ruby on Rails for <br>
-          my development process. For  <br>
-          design I use Adobe Illustrator and <br>
-          Adobe Photoshop.
-        </p>
-        <p>
-          Through this blog I want to show <br>
-          people what I can do and also  <br>
-          share what I learn with the  <br>
-          community.
-        </p>
-        <p>
-          I use <a href="http://codepen.io/Ollzane/pens/public/" target="_blank">Codepen</a> often for playing <br>
-          around with front-end related stuff.
-        </p>
+    <div class="articles-container">
+      <div class="articles-wrapper">
+        <% @posts.each do |post| %>
+          <%= link_to post do %>
+            <h1><%= post.title %></h1>
+            <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+          <% end %>
+        <% end %>
       </div>
     </div>
-    <div class="articles-container clearfix">
-      <div class="title-container">
-        <h1>Stuff that I've written</h1>
-        <div class="underline-object"></div>
+    <%= link_to posts_path do %>
+      <div class="post-more-container">
+        <h1>More posts?</h1>
       </div>
-      <% @posts.each do |post| %>
-        <h3><%= link_to post.title, post %></h3>
-        <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
-        <hr class="post-rule">
-      <% end %>
-    </div>
-    <div class="projects-container clearfix">
+    <% end %>
+    <div class="projects-container">
       <div class="title-container">
         <h1>My recent projects</h1>
-        <div class="underline-object"></div>
       </div>
-      <% @projects.each do |project| %>
-        <h3><%= link_to project.title, project %></h3>
-        <p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
-        <hr class="project-rule">
-      <% end %>
+      <div class="projects-wrapper">
+        <% @projects.each do |project| %>
+          <%= link_to project do %>
+            <h1><%= project.title %></h1>
+            <p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
+          <% end %>
+        <% end %>
+      </div>
     </div>
+    <%= link_to projects_path do %>
+      <div class="project-more-container">
+        <h1>More projects?</h1>
+      </div>
+    <% end %>
   </div>
 </div>
