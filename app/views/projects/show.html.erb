@@ -18,10 +18,9 @@
 
     <div class="project-content">
       <%= markdown @project.description %>
-      <div class="project-link">
-        <a href="<%= @project.link %>" class="project-button" target="_blank" >Visit <%= @project.title %></a>
-      </div>
     </div>
-    <hr class="project-sep">
+    <div class="project-link">
+      <a href="<%= @project.link %>" class="project-button" target="_blank" >Visit <%= @project.title %></a>
+    </div>
   </div>
 </div>

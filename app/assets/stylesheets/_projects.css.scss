@@ -85,18 +85,25 @@
   align-items: center;
   flex-direction: column;
   .project-wrapper {
-    width: 1200px;
+    width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     .project-title-container {
       text-align: center;
+      width: 100%;
+      background: $more;
+      height: 15vh;
       .project-title {
-        color: $text-color;
+        color: white;
         font-size: 4em;
         font-weight: bold;
         margin-bottom: 10px;
         .date {
           font-size: 0.3em;
-          color: #B0BBC2;
+          color: darken($gray, 15);
           margin-bottom: 3px;
         }
       }
@@ -104,13 +111,13 @@
         text-decoration: none;
         margin: 0;
         font-size: 1.1em;
-        color: #88A3B5;
+        color: darken($gray, 15);
         transition: all 0.2s ease-in-out;
         padding: 5px 15px;
         border-radius: 5px;
         &:hover{
-          color: $white;
-          background: #88A3B5;
+          color: $more;
+          background: darken($gray, 15);
         }
       }
       .edit {
@@ -122,34 +129,31 @@
     }
     .project-content {
       color: $text-color;
-      border-top: 8px $blue solid;
-      border-bottom: 8px $blue solid;
-      padding: 15px 5px;
       border-radius: 8px;
       font-size: 1.4em;
-    }
-    .project-sep {
-      border: 4px $underline solid;
-      width: 10%;
-      margin-top: 4em;
-      margin-bottom: 4em;
+      width: 60%;
+      margin-bottom: 2em;
     }
     .project-link {
-      text-align: center;
       width: 100%;
-      margin: 3em 0;
+      background: $more;
+      height: 15vh;
+      position: relative;
       .project-button {
-        color: $highlight;
+        color: white;
         font-weight: bold;
+        font-size: 1.5em;
         text-decoration: none;
-        border: 4px solid $highlight;
+        border: 4px solid white;
         transition: all 0.3s ease-in-out;
         padding: 1em 1.5em;
         border-radius: 5px;
-
+        position: absolute;
+        left: 45.5%;
+        top: 28%;
         &:hover{
-          color: $white;
-          background: $highlight;
+          color: $more;
+          background: white;
         }
       }
     }
