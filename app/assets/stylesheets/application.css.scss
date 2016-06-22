@@ -72,14 +72,14 @@ body {
           text-decoration: none;
           .post-more-container {
             width: 100%;
-            height: 10vh;
+            height: 10em;
             background-color: $more;
             text-align: center;
             h1 {
               color: white;
               font-size: 4.5em;
               padding: 0;
-              padding-top: 0.25em;
+              padding-top: 0.5em;
               margin: 0;
             }
           }
@@ -88,22 +88,57 @@ body {
           text-decoration: none;
           .project-more-container {
             width: 100%;
-            height: 10vh;
+            height: 10em;
             background-color: $more;
             text-align: center;
-            margin-top: 7em;
             h1 {
               color: white;
               font-size: 4.5em;
               padding: 0;
-              padding-top: 0.25em;
+              padding-top: 0.5em;
+              margin: 0;
+            }
+          }
+        }
+        a {
+          text-decoration: none;
+          .contact-container {
+            width: 100%;
+            height: 10em;
+            background-color: $post1;
+            text-align: center;
+            position: relative;
+            h1::before{
+              content: '';
+              position: absolute;
+              bottom: 20%;
+              left: 35%;
+              width: 30%;
+              height: 0.15em;
+              background: white;
+              display: block;
+              transform-origin: right top;
+              transform: scale(0, 1);
+              -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+              transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+            }
+            &:hover h1::before{
+                transform-origin: left top;
+                transform: scale(1, 1);
+              }
+            h1 {
+              color: white;
+              font-family: 'Limelight', cursive;
+              font-size: 4.5em;
+              padding: 0;
+              padding-top: 0.5em;
               margin: 0;
             }
           }
         }
         .articles-container{
             width: 100%;
-            height: 100vh;
+            height: 100%;
             margin: auto;
             }
             .articles-wrapper {
@@ -116,6 +151,7 @@ body {
               padding: 0;
               a {
                 width: 50%;
+                height: 40em;
                 padding: 0;
                 position: relative;
                 text-decoration: none;
@@ -150,7 +186,7 @@ body {
                 h1 {
                   font-size: 6em;
                   color: white;
-                  margin-top: 2em;
+                  margin-top: 2.3em;
                   transition: all 0.3s cubic-bezier(1,0,0,1);
                   position: relative;
                 }
@@ -164,7 +200,7 @@ body {
             }
         .projects-container{
             width: 100%;
-            height: 25vh;
+            height: 100%;
             text-decoration: none;
             .title-container{
                 h1{
@@ -183,6 +219,7 @@ body {
               padding: 0;
               a {
                 width: 25%;
+                height: 19em;
                 padding: 0;
                 position: relative;
                 text-decoration: none;
@@ -217,7 +254,7 @@ body {
                 h1 {
                   font-size: 4em;
                   color: white;
-                  margin-top: 2em;
+                  margin-top: 1.6em;
                   transition: all 0.3s cubic-bezier(1,0,0,1);
                   position: relative;
                 }

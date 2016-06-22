@@ -27,11 +27,13 @@
     <div class="label">
       <%= f.label :link %><br>
     </div>
-    <%= f.text_field :link %>
+    <%= f.text_field :link, placeholder: "Add a link to your project? Maybe?" %>
 
     <br>
     <br>
-    
-    <%= f.submit %>
+
+    <div class="new">
+      <%= f.submit %>
+    </div>
 
 <% end %>
