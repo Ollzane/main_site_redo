@@ -1,0 +1,115 @@
+.login-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h1{
+    color: white;
+    padding: 0.6em;
+    font-size: 4em;
+    margin-bottom: 1.4em;
+    background: $more;
+    width: 100%;
+    text-align: center;
+  }
+  .login-wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    .field {
+      text-align: left;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $text-color;
+      font-size: 1.2em;
+      margin-left: 30%;
+      width: 100%;
+      .check {
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        input[type="checkbox"] {
+          display: none;
+          + label:before {
+            display: inline-block;
+            transition: all 0.2s ease-in-out;
+            margin: -6px 15px 0 0;
+            vertical-align: middle;
+            width: 30px;
+            height: 30px;
+            background: white;
+            border: 2px solid lighten($more, 20);
+            border-radius: 5px;
+            color: #ecf0f1;
+            content: '';
+            margin-right: 0.8em;
+            font-size: 30px;
+            font-weight: bold;
+          }
+          &:checked + label:before {
+            background: lighten($more, 20);
+            text-align: center;
+            line-height: 1em;
+            color: #ecf0f1;
+            content: '\2714';
+          }
+        }
+        label {
+          cursor: pointer;
+        }
+      }
+    }
+    input[type=email] {
+      width: 40%;
+      height: 2.5em;
+      border-radius: 5px;
+      border: 2px #A3BAC9 solid;
+      padding: 10px;
+      font-family: 'raleway', sans-serif;
+      font-size: 1.2em;
+      color: $text-color;
+      margin-top: 5px;
+      margin: 0 auto;
+    }
+    input[type=password] {
+      width: 40%;
+      height: 2.5em;
+      border-radius: 5px;
+      border: 2px #A3BAC9 solid;
+      padding: 10px;
+      font-family: 'raleway', sans-serif;
+      font-size: 1.2em;
+      color: $text-color;
+      margin-top: 5px;
+      margin: 0 auto;
+    }
+    .actions{
+      width: 100%;
+      background: $more;
+      height: 12em;
+      position: relative;
+      margin-top: 2em;
+      input[type=submit] {
+        color: white;
+        font-weight: bold;
+        font-size: 1.5em;
+        text-decoration: none;
+        border: 4px solid white;
+        background: $more;
+        transition: all 0.3s ease-in-out;
+        padding: 1em 4em;
+        border-radius: 5px;
+        position: absolute;
+        left: 45%;
+        top: 28%;
+        cursor: pointer;
+        &:hover{
+          color: $more;
+          background: white;
+        }
+      }
+    }
+  }
+}

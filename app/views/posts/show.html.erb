@@ -6,10 +6,14 @@
         <%= @post.title %><br>
       </div>
       <div class="edit">
-        <%= link_to "Edit", edit_post_path(@post) %>
+        <% if user_signed_in? %>
+          <%= link_to "Edit Article", edit_post_path(@post) %>
+        <% end %>
       </div>
       <div class="delete">
-        <%= link_to "Delete ", post_path(@post), method: :delete, data: { confirm: "Are you sure you want to delete this post?" } %>
+        <% if user_signed_in? %>
+          <%= link_to "Delete Article", post_path(@post), method: :delete, data: { confirm: "Are you sure you want to delete this post?" } %>
+        <% end %>
       </div>
     </div>
     <br>
@@ -18,6 +22,7 @@
     <div class="post-content">
       <%= markdown @post.content %>
     </div>
+
     <div class="share-post">
       <h2>How about sharing '<%= @post.title %>' ?</h2>
       <!-- Twitter -->

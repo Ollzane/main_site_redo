@@ -19,6 +19,15 @@
     </div>
     <%= link_to "O | C", root_path %>
   </header>
+  <div id="logout">
+    <% if user_signed_in? %>
+      <%= link_to destroy_user_session_path, method: :delete do %>
+      <div class="logouth1">
+        <h1>Sign Out</h1>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
 
   <% if notice %>
     <p class="notice"><%= notice %></p>

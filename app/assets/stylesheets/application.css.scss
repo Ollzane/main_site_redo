@@ -57,6 +57,25 @@ body {
     border-radius: 50%;
   }
 }
+#logout {
+  width: 100%;
+  a {
+    text-decoration: none;
+    .logouth1 {
+      width: 100%;
+      height: 10em;
+      background-color: $more;
+      text-align: center;
+      h1 {
+        color: white;
+        font-size: 4.5em;
+        padding: 0;
+        padding-top: 0.5em;
+        margin: 0;
+      }
+    }
+  }
+}
 #main-wrapper {
     width: 100%;
     height: 100%;
@@ -437,3 +456,4 @@ body {
 @import "pygments";
 @import "projects";
 @import "contacts";
+@import "signin";
