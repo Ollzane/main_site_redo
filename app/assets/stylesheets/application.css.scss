@@ -311,89 +311,60 @@ body {
     }
   }
 }
-@media only screen and (max-width: 1200px){
-    #main-wrapper{
 
-        .content-wrapper{
-            width: 100%;
-            display: block;
-            text-align: center;
-
-            .about-me-container{
-                width: 100%;
-                height: 46em;
-                display: block;
-                float: none;
-
-                .title-container{
-                    margin-left: 0;
-
-                    .underline-object{
-                        display: none;
+@media screen and (max-width: 1820px) {
+  #main-wrapper {
+      .content-wrapper {
+          a {
+              h1 {
               }
             }
           }
-        }
-
-            .articles-container{
-                width: 100%;
-                height: 46em;
-                display: block;
-                float: none;
-
-                .title-container{
-                    margin-left: 0;
-
-                    .underline-object{
-                        display: none;
+          a {
+            .project-more-container {
+              h1 {
               }
             }
-            h3 {
-                font-size: 2em;
-                margin-left: 30px;
-                a {
-                  font-family: 'raleway', sans-serif;;
-                  text-decoration: none;
-                  color: $text-color;
-                  transition: all 0.2s ease-in-out;
-                  &:hover {
-                          color: #4F97C9;
-                  }
+          }
+          a {
+            .contact-container {
+              h1 {
+              }
+            }
+          }
+          .articles-container{
+            .articles-wrapper {
+              a {
+                height: 30em;
+                h1 {
+                  font-size: 4em;
                 }
+              }
             }
             .date {
-                  margin-top: -20px;
-                  margin-left: 30px;
-                  color: #B8C9D4;
-                  font-size: 1.1em;
+              font-size: 0.9em;
             }
-            .post-rule{
-              margin-left: 42.5%;
-            }
-          }
+              }
 
-            .projects-container{
-                width: 100%;
-                height: 46em;
-                display: block;
-                float: none;
-
-                .title-container{
-                    margin-left: 0;
-
-                    .underline-object{
-                        display: none;
-        }
+          .projects-container{
+              .title-container{
+                  h1{
+                    }
+              }
+              .projects-wrapper {
+                a {
+                  h1 {
+                    font-size: 3em;
+                  }
+                }
+              }
+                .date {
+                  }
+              }
       }
     }
-  }
-    #blog-main-footer{
-        bottom: -1200px;
-        .footer-container{
-            width: 100%;
-    }
-  }
-}
+
+
 
 @import "new";
 @import "post";
